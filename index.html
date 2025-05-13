@@ -5,53 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AQUALUX Paid Charges</title>
   <style>
-    body {
+    html, body {
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #a8edea, #fed6e3);
-      margin: 0;
-      padding: 40px 20px;
       color: #333;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     h1 {
       text-align: center;
       color: #2c3e50;
-      font-size: 36px;
-      margin-bottom: 50px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .card-wrapper {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .card {
       background: white;
       border-radius: 16px;
-      padding: 25px;
+      padding: 20px;
+      flex: 1;
+      min-width: 300px;
+      max-width: 30%;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-      margin-bottom: 30px;
     }
 
     .section-title {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 600;
       color: #2980b9;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       border-left: 6px solid #3498db;
-      padding-left: 12px;
+      padding-left: 10px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      border-radius: 12px;
-      overflow: hidden;
+      font-size: 14px;
     }
 
     th, td {
-      padding: 14px 20px;
+      padding: 10px 12px;
       text-align: left;
       border-bottom: 1px solid #e0e0e0;
     }
@@ -66,17 +81,9 @@
       background-color: #f9f9f9;
     }
 
-    @media (max-width: 600px) {
-      th, td {
-        padding: 10px;
-      }
-
-      .section-title {
-        font-size: 18px;
-      }
-
-      h1 {
-        font-size: 28px;
+    @media (max-height: 750px) {
+      html, body {
+        overflow-y: auto;
       }
     }
   </style>
@@ -86,51 +93,44 @@
   <div class="container">
     <h1>AQUALUX Cruise - Paid Charges</h1>
 
-    <div class="card">
-      <div class="section-title">Conference Room Charges</div>
-      <table>
-        <thead>
-          <tr><th>Type</th><th>Cost</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Per Day</td><td>Rs. 3,500</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="section-title">Conference Room</div>
+        <table>
+          <thead><tr><th>Type</th><th>Cost</th></tr></thead>
+          <tbody><tr><td>Per Day</td><td>Rs. 3,500</td></tr></tbody>
+        </table>
+      </div>
 
-    <div class="card">
-      <div class="section-title">Room Charges</div>
-      <table>
-        <thead>
-          <tr><th>Room Type</th><th>Cost</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Suite</td><td>Rs. 25,000</td></tr>
-          <tr><td>Family</td><td>Rs. 20,000</td></tr>
-          <tr><td>Twin Share</td><td>Rs. 18,000</td></tr>
-          <tr><td>Single</td><td>Rs. 15,000</td></tr>
-          <tr><td>Dorm</td><td>Rs. 10,000</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="card">
+        <div class="section-title">Room Charges</div>
+        <table>
+          <thead><tr><th>Room</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Suite</td><td>Rs. 25,000</td></tr>
+            <tr><td>Family</td><td>Rs. 20,000</td></tr>
+            <tr><td>Twin Share</td><td>Rs. 18,000</td></tr>
+            <tr><td>Single</td><td>Rs. 15,000</td></tr>
+            <tr><td>Dorm</td><td>Rs. 10,000</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="card">
-      <div class="section-title">Food Charges</div>
-      <table>
-        <thead>
-          <tr><th>Food Item</th><th>Cost</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Chicken Fried Rice</td><td>Rs. 450</td></tr>
-          <tr><td>Chicken Noodles</td><td>Rs. 280</td></tr>
-          <tr><td>Dosa</td><td>Rs. 120</td></tr>
-          <tr><td>Idly</td><td>Rs. 135</td></tr>
-          <tr><td>Biriyani</td><td>Rs. 430</td></tr>
-          <tr><td>Pasta</td><td>Rs. 550</td></tr>
-        </tbody>
-      </table>
+      <div class="card">
+        <div class="section-title">Food Charges</div>
+        <table>
+          <thead><tr><th>Item</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Chicken Fried Rice</td><td>Rs. 450</td></tr>
+            <tr><td>Chicken Noodles</td><td>Rs. 280</td></tr>
+            <tr><td>Dosa</td><td>Rs. 120</td></tr>
+            <tr><td>Idly</td><td>Rs. 135</td></tr>
+            <tr><td>Biriyani</td><td>Rs. 430</td></tr>
+            <tr><td>Pasta</td><td>Rs. 550</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-
   </div>
 
 </body>
