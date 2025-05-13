@@ -9,53 +9,75 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #a8edea, #fed6e3);
       margin: 0;
-      padding: 40px;
+      padding: 40px 20px;
       color: #333;
     }
 
     .container {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
       text-align: center;
       color: #2c3e50;
+      font-size: 36px;
+      margin-bottom: 50px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
       margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #2980b9;
+      margin-bottom: 20px;
+      border-left: 6px solid #3498db;
+      padding-left: 12px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 40px;
+      border-radius: 12px;
+      overflow: hidden;
     }
 
     th, td {
-      padding: 12px 16px;
+      padding: 14px 20px;
       text-align: left;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     th {
       background-color: #3498db;
       color: white;
+      font-weight: 600;
     }
 
     tr:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: #f9f9f9;
     }
 
-    .section-title {
-      font-size: 20px;
-      color: #2980b9;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      border-left: 6px solid #3498db;
-      padding-left: 10px;
+    @media (max-width: 600px) {
+      th, td {
+        padding: 10px;
+      }
+
+      .section-title {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
@@ -64,44 +86,51 @@
   <div class="container">
     <h1>AQUALUX Cruise - Paid Charges</h1>
 
-    <div class="section-title">Conference Room</div>
-    <table>
-      <thead>
-        <tr><th>Type</th><th>Cost</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Per Day</td><td>Rs. 3,500</td></tr>
-      </tbody>
-    </table>
+    <div class="card">
+      <div class="section-title">Conference Room Charges</div>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Per Day</td><td>Rs. 3,500</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <div class="section-title">Room Charges</div>
-    <table>
-      <thead>
-        <tr><th>Room Type</th><th>Cost</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Suite</td><td>Rs. 25,000</td></tr>
-        <tr><td>Family</td><td>Rs. 20,000</td></tr>
-        <tr><td>Twin Share</td><td>Rs. 18,000</td></tr>
-        <tr><td>Single</td><td>Rs. 15,000</td></tr>
-        <tr><td>Dorm</td><td>Rs. 10,000</td></tr>
-      </tbody>
-    </table>
+    <div class="card">
+      <div class="section-title">Room Charges</div>
+      <table>
+        <thead>
+          <tr><th>Room Type</th><th>Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Suite</td><td>Rs. 25,000</td></tr>
+          <tr><td>Family</td><td>Rs. 20,000</td></tr>
+          <tr><td>Twin Share</td><td>Rs. 18,000</td></tr>
+          <tr><td>Single</td><td>Rs. 15,000</td></tr>
+          <tr><td>Dorm</td><td>Rs. 10,000</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-    <div class="section-title">Food Charges</div>
-    <table>
-      <thead>
-        <tr><th>Food Item</th><th>Cost</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Chicken Fried Rice</td><td>Rs. 450</td></tr>
-        <tr><td>Chicken Noodles</td><td>Rs. 280</td></tr>
-        <tr><td>Dosa</td><td>Rs. 120</td></tr>
-        <tr><td>Idly</td><td>Rs. 135</td></tr>
-        <tr><td>Biriyani</td><td>Rs. 430</td></tr>
-        <tr><td>Pasta</td><td>Rs. 550</td></tr>
-      </tbody>
-    </table>
+    <div class="card">
+      <div class="section-title">Food Charges</div>
+      <table>
+        <thead>
+          <tr><th>Food Item</th><th>Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Chicken Fried Rice</td><td>Rs. 450</td></tr>
+          <tr><td>Chicken Noodles</td><td>Rs. 280</td></tr>
+          <tr><td>Dosa</td><td>Rs. 120</td></tr>
+          <tr><td>Idly</td><td>Rs. 135</td></tr>
+          <tr><td>Biriyani</td><td>Rs. 430</td></tr>
+          <tr><td>Pasta</td><td>Rs. 550</td></tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
 </body>
